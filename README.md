@@ -1,4 +1,4 @@
-# 🎙️ GeminiScribe (2025 Edition)
+# 🎙️ IAScribe (2025 Edition)
 
 > **Transcription Audio AI Haute Fidélité via Google Gemini 3**
 > *Conçu pour Android/Termux, compatible Linux/Mac.*
@@ -26,8 +26,8 @@ Le fichier final (`NomDuFichier_Transcription.txt`) sera **automatiquement enreg
 
 ### 2. Setup (Automatique)
 \`\`\`bash
-git clone https://github.com/VOTRE_USER/AUDIO_GeminiScribe_26122025.git
-cd AUDIO_GeminiScribe_26122025
+git clone https://github.com/VOTRE_USER/AUDIO_IAScribe_26122025.git
+cd AUDIO_IAScribe_26122025
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

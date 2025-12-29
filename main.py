@@ -66,7 +66,7 @@ def convert_to_optimized_mp3(input_path):
         return None
 
 def main():
-    print(f"\n🤖 \033[1mGeminiScribe\033[0m (Modele: {MODEL_NAME})")
+    print(f"\n🤖 \033[1mIAScribe\033[0m (Modele: {MODEL_NAME})")
     
     if not API_KEY:
         print("❌ ERREUR : Clé API manquante dans .env")
