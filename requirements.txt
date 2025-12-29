@@ -1,0 +1,10 @@
+# Core Google AI SDK
+google-generativeai>=0.8.3
+
+# Gestion des variables d'environnement (.env)
+python-dotenv>=1.0.0
+
+# Utilitaires optionnels recommandés pour les scripts CLI
+# (Décommentez si votre script utilise des barres de progression ou du formatage couleur)
+# tqdm>=4.66.0
+# colorama>=0.4.6
