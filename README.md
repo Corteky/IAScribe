@@ -29,72 +29,41 @@ Le fichier final (`NomDuFichier_Transcription.txt`) sera **automatiquement enreg
 
 ### 2. Setup (Automatique)
 ```bash
-git clone [https://github.com/VOTRE_USER/AUDIO_IAScribe_26122025.git](https://github.com/VOTRE_USER/AUDIO_IAScribe_26122025.git)
-cd AUDIO_IAScribe_26122025
+git clone https://github.com/Corteky/IAScribe.git
+cd AUDIO_GeminiScribe_26122025
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-
 ```
 
-*(Note: Si vous n'avez pas de requirements.txt, faites `pip install google-generativeai python-dotenv`)*
-
 ### 3. Configuration de l'IA (CRITIQUE ⚠️)
-
-#### A. Obtenir votre clé API
-
-Ce script nécessite une clé API Google AI Studio.
-
-1. Rendez-vous sur **[Google AI Studio](https://aistudio.google.com/app/apikey)**.
-2. Connectez-vous avec un compte Google.
-3. Cliquez sur **"Create API Key"**.
-*(Note : Le "Free Tier" est généralement suffisant pour une utilisation personnelle, vérifiez les quotas sur le site).*
-
-#### B. Créer le fichier .env
-
-Créez un fichier nommé `.env` à la racine du projet avec les variables suivantes :
-
-**Explications des variables :**
-
-1. `GOOGLE_API_KEY` : La clé obtenue à l'étape précédente.
-2. `GEMINI_MODEL` : Le modèle choisi.
-* `gemini-1.5-flash` : Rapide, économique, suffisant pour 90% des cas.
-* `gemini-1.5-pro` : Plus lent, meilleure capacité d'analyse complexe.
-* `gemini-2.0-flash-exp` : (Si disponible) Nouvelle génération rapide.
-
-
-3. `PROJECT_ROOT` : Le dossier parent de vos vidéos (Optionnel, facilite la saisie des chemins).
-
-**Contenu à copier dans le fichier `.env` :**
-
+Créez un fichier nommé `.env` à la racine du projet contenant votre clé API (obtenue sur Google AI Studio) :
 ```ini
 GOOGLE_API_KEY=AIzaSyVotreCleSecreteIci
 GEMINI_MODEL=gemini-1.5-flash
 PROJECT_ROOT=/storage/emulated/0/Documents/ProgDev
-
 ```
+
+### 4. Création du Raccourci (Recommandé)
+Pour lancer le script depuis n'importe où avec la commande `scribe`, exécutez ces lignes **en étant situé dans le dossier du projet** :
+
+```bash
+# La commande $(pwd) récupère automatiquement le chemin complet actuel
+echo "alias scribe='python $(pwd)/main.py'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+*(Si vous utilisez zsh ou un autre shell, adaptez le fichier de config, ex: .zshrc)*
 
 ## 🚀 Utilisation
 
-### Via le Raccourci (Recommandé)
-
-Si vous avez configuré l'alias, tapez simplement :
-
+Une fois l'alias configuré, tapez simplement :
 ```bash
 scribe
-
 ```
-
 Le script vous demandera l'URI du fichier.
-
-* Vous pouvez utiliser le "Drag & Drop" dans le terminal.
-* Si `PROJECT_ROOT` est configuré, tapez juste le chemin relatif (ex: `MaVideo.mp4`).
-
-## 🏷️ Mots-clés (Github Topics)
-
-`python` `android` `termux` `gemini-api` `speech-to-text` `transcription` `ffmpeg` `automation` `accessibility` `audhd`
+- Vous pouvez utiliser le "Drag & Drop" dans le terminal.
+- Si `PROJECT_ROOT` est configuré, tapez juste le chemin relatif (ex: `MaVideo.mp4`).
 
 ## 🛡️ License
-
 MIT License.
-
